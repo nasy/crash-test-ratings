@@ -33,3 +33,13 @@ services:
     # AppBundle\Service\ExampleService:
     #     arguments:
     #         $someArgument: 'some_value'
+
+    AppBundle\Core\HttpClient\Infrastructure\Guzzle\GuzzleHttpClient:
+        arguments: []
+        public: true
+    AppBundle\Core\Vehicle\Application\GetVehiclesService:
+        arguments:
+          - '@AppBundle\Core\HttpClient\Infrastructure\Guzzle\GuzzleHttpClient'
+          - '%vehicles_api_endpoint%'
+          - '%vehicles_api_response_format%'
+        public: true

@@ -17,3 +17,5 @@ parameters:
 
     # A secret key that's used to generate certain security-related tokens
     secret: ThisTokenIsNotSoSecretChangeIt
+    vehicles_api_endpoint: https://one.nhtsa.gov/webapi/api/SafetyRatings
+    vehicles_api_response_format: json
