@@ -1,7 +1,9 @@
 FROM php:7.2-apache
 
-RUN apt-get update && \
-    apt-get clean
+RUN apt-get update && apt-get install --no-install-recommends --no-install-suggests -y \
+    wget \
+    zlib1g-dev \
+    && /usr/local/bin/docker-php-ext-install zip
 
 COPY code /var/www/html/
 
