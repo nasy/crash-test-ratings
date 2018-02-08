@@ -22,3 +22,7 @@ Option B, without Docker:
 4) Give permissions to var/cache, var/logs, var/sessions
 5) Make sure you are running PHP7.2 or higher
 6) Make sure you have Curl installed
+
+Note: To run unit and functional tests: 
+1) cd into code folder
+2) ./vendor/bin/simple-phpunit
